@@ -1,0 +1,12 @@
+.container{
+    max-width: 720px;
+  }
+
+  body{
+    background-color: rgb(233, 226, 218);
+  }
+
+img{
+  height: 40%;
+  width: 40%;
+}
