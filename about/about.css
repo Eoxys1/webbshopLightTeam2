@@ -3,10 +3,24 @@
   }
 
   body{
-    background-color: rgb(233, 226, 218);
+    background-color: rgb(249, 243, 236);
   }
 
 img{
   height: 40%;
   width: 40%;
 }
+
+footer {
+  background-color: #f8f9fa; 
+  color: #6c757d; 
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+
