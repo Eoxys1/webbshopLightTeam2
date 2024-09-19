@@ -6,5 +6,10 @@ const containers = document.querySelector('.testProductList');
     let qty = container.querySelector('.qty');
 
     addButton.addEventListener('click', () => qty.value++);
-    removeButton.addEventListener('click', () => qty.value--);
+    removeButton.addEventListener('click', () => {
+        qty.value--
+        if(qty.value<0){
+            qty.value=0
+        }
+    });
 });
