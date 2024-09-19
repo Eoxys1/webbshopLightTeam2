@@ -16,7 +16,18 @@ const cart = {
 		const data = JSON.parse(localStorage.getItem(localstore_name) ?? "{}")
 		data[id] ??= 0
 		data[id] -= data[id] == 0 ? 0 : 1
-		if (data[id] === 0) {
+		if (data[id] <= 0) {
+			delete data[id]
+		}
+		localStorage.setItem(localstore_name, JSON.stringify(data))
+	},
+	/**
+	 * @param {string} id
+	 */
+	set(id,val) {
+		const data = JSON.parse(localStorage.getItem(localstore_name) ?? "{}")
+		data[id] = val
+		if (data[id] <= 0||data[id]===null||data[id]===undefined) {
 			delete data[id]
 		}
 		localStorage.setItem(localstore_name, JSON.stringify(data))

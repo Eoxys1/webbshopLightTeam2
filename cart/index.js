@@ -19,6 +19,13 @@ buy_btn.addEventListener("click", () => {
 		elem.remove()
 	}
 })
+
+/* 
+
+
+
+*/
+
 const pageWidth = 595
 const pageHeight = document.body.clientHeight
 // Create a hidden div to hold the screenshot
