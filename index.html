@@ -22,6 +22,8 @@
                 <span class="navbar-toggler-icon"></span>
              </button>
 
+             <!-- makes a list of the buttons that can colapse on small screens -->
+
              <div class="collapse navbar-collapse justify-content-start align-center" id="main-nav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -29,7 +31,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="aboutPage.html" type="button" class="nav-link btn bg-dark text-light mx-2">about</a>
+                        <a href="/about/index.html" type="button" class="nav-link btn bg-dark text-light mx-2">about</a>
                     </li>
 
                     <li class="nav-item">
@@ -43,10 +45,10 @@
              </div>
 
              <!-- Responsive Search Bar -->
-            <form class="d-flex justify-content-end mx-3 my-2 w-50 w-md-50" role="search">
+            <!--  <form class="d-flex justify-content-end mx-3 my-2 w-50 w-md-50" role="search">
                 <input type="text" class="form-control me-2 w-50 w-md-75" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-dark" type="submit">Search</button>
-            </form>
+            </form> -->
 
             <!-- cart button -->
             <div class="justify-content-end">
@@ -57,19 +59,27 @@
 
     </nav>
 
+    <div class="container-fluid bg-dark justify-content-center text-center">
+        <div class="container-fluid align-center">
+            <h1 class="text-light">produkts</h1>
+        </div>
+        
+
+    </div>
+
     <!-- containers for items -->
 
     <div class="container-sm text-center py-5">
         <div class="row align-items-center justify-content-center gx-5" id="item_list">
 
             <!-- add card -->
-            <div class="col-md-6 col-lg-4 col-xl-4" item="1">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="1">
 
                 <!-- adds card body -->
                 <div class="card-body">
 
                     <!--  adds img to card -->
-                    <img src="/assets/image(1).jpeg" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                    <img src="/assets/image(1).jpeg" alt="..." class="card-img img-fluid image-adjust">
 
                     <!-- adds produkt name (card title) -->
                     <h4 class="card-title pt-5">produkt</h4>
@@ -87,9 +97,9 @@
 
             <!-- -||- -->
 
-            <div class="col-md-6 col-lg-4 col-xl-4" item="2">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="2">
                 <div class="card-body">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <button type="button" class="btn btn-light add_item">+</button>
@@ -99,33 +109,9 @@
 
             <!-- -||- -->
 
-            <div class="col-md-6 col-lg-4 col-xl-4" item="3">
-                <div class="card-body ">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
-                    <h4 class="card-title pt-5">produkt</h4>
-                    <p class="card-text pt-3">price</p>
-                    <button type="button" class="btn btn-light add_item">+</button>
-                    <button type="button" class="btn btn-light remove_item">-</button>
-                </div>
-            </div>
-
-            <!-- -||- -->
-
-            <div class="col-md-6 col-lg-4 col-xl-4" item="4">
-                <div class="card-body py-4">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
-                    <h4 class="card-title pt-5">produkt</h4>
-                    <p class="card-text pt-3">price</p>
-                    <button type="button" class="btn btn-light add_item">+</button>
-                    <button type="button" class="btn btn-light remove_item">-</button>
-                </div>
-            </div>
-
-            <!-- -||- -->
-
-            <div class="col-md-6 col-lg-4 col-xl-4" item="5">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="3">
                 <div class="card-body">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <button type="button" class="btn btn-light add_item">+</button>
@@ -135,9 +121,9 @@
 
             <!-- -||- -->
 
-            <div class="col-md-6 col-lg-4 col-xl-4" item="6">
-                <div class="card-body ">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="4">
+                <div class="card-body">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <button type="button" class="btn btn-light add_item">+</button>
@@ -147,9 +133,9 @@
 
             <!-- -||- -->
 
-            <div class="col-md-6 col-lg-4 col-xl-4" item="7">
-                <div class="card-body py-4">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="5">
+                <div class="card-body">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <button type="button" class="btn btn-light add_item">+</button>
@@ -159,9 +145,9 @@
 
             <!-- -||- -->
 
-            <div class="col-md-6 col-lg-4 col-xl-4" item="8">
-                <div class="card-body ">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="6">
+                <div class="card-body">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <button type="button" class="btn btn-light add_item">+</button>
@@ -171,9 +157,9 @@
 
             <!-- -||- -->
 
-            <div class="col-md-6 col-lg-4 col-xl-4" item="9">
-                <div class="card-body py-4">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="7">
+                <div class="card-body">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <button type="button" class="btn btn-light add_item">+</button>
@@ -183,9 +169,33 @@
 
             <!-- -||- -->
 
-            <div class="col-md-6 col-lg-4 col-xl-4" item="10">
-                <div class="card-body py-4">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="8">
+                <div class="card-body">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                    <h4 class="card-title pt-5">produkt</h4>
+                    <p class="card-text pt-3">price</p>
+                    <button type="button" class="btn btn-light add_item">+</button>
+                    <button type="button" class="btn btn-light remove_item">-</button>
+                </div>
+            </div>
+
+            <!-- -||- -->
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="9">
+                <div class="card-body">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                    <h4 class="card-title pt-5">produkt</h4>
+                    <p class="card-text pt-3">price</p>
+                    <button type="button" class="btn btn-light add_item">+</button>
+                    <button type="button" class="btn btn-light remove_item">-</button>
+                </div>
+            </div>
+
+            <!-- -||- -->
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="10">
+                <div class="card-body">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <button type="button" class="btn btn-light add_item">+</button>
@@ -195,6 +205,10 @@
 
         </div>
     </div>
+
+    <footer>
+        
+    </footer>
 
 </body>
 </html>
