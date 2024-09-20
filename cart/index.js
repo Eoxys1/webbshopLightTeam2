@@ -15,7 +15,8 @@ for (const key in data) {
 }
 buy_btn.addEventListener("click", () => {
 	cart.clear()
-	for (const elem of list.children) {
+	for (const elem of Object.values(list.children)) {
+		list.removeChild(elem)
 		elem.remove()
 	}
 })
