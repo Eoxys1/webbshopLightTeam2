@@ -9,29 +9,52 @@
     <title>Document</title>
     <script defer src="./main.js"></script>
 </head>
+
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <!-- Navigation button type="button"s on the left -->
-            <div class="d-flex">
-                <button type="button" type="button" class="btn btn-outline-dark me-2">Home</button>
-                <a href="aboutPage.html" type="button" class="btn btn-outline-dark me-2">About</a>
-                <button type="button" type="button" class="btn btn-outline-dark me-2">Products</button>
-                <button type="button" type="button" class="btn btn-outline-dark">Contact</button>
-            </div>
 
-            <!-- Search bar centered -->
-            <form class="d-flex mx-auto" role="search">
-                <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
-                <button type="button" class="btn btn-outline-dark" type="submit">Search</button>
+    <nav class="navbar navbar-expand-md bg-light position-sticky top-0">
+
+        <div class="container-xxl">
+            <!-- toggle button for navbar on mobile screens -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" 
+             aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+
+             <div class="collapse navbar-collapse justify-content-start align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" type="button" class="nav-link btn bg-dark text-light mx-2">home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="aboutPage.html" type="button" class="nav-link btn bg-dark text-light mx-2">about</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" type="button" class="nav-link btn bg-dark text-light mx-2">products</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" type="button" class="nav-link btn bg-dark text-light mx-2">contact</a>
+                    </li>
+                </ul>
+             </div>
+
+             <!-- Responsive Search Bar -->
+            <form class="d-flex justify-content-end mx-3 my-2 w-50 w-md-50" role="search">
+                <input type="text" class="form-control me-2 w-50 w-md-75" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
 
+            <!-- cart button -->
             <div class="justify-content-end">
                 <a href="#" class="btn btn-dark">cart</a>
             </div>
 
         </div>
+
     </nav>
 
     <!-- containers for items -->
@@ -40,7 +63,6 @@
         <div class="row align-items-center justify-content-center gx-5" id="item_list">
 
             <!-- add card -->
-            
             <div class="col-md-6 col-lg-4 col-xl-4" item="1">
 
                 <!-- adds card body -->
@@ -49,10 +71,10 @@
                     <!--  adds img to card -->
                     <img src="/assets/image(1).jpeg" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
 
-                    <!-- adds produkt name -->
+                    <!-- adds produkt name (card title) -->
                     <h4 class="card-title pt-5">produkt</h4>
 
-                    <!-- adds price of produkt -->
+                    <!-- adds price of produkt (card text)-->
                     <p class="card-text pt-3">price</p>
 
                     <!-- adds button for adding item to cart -->
