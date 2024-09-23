@@ -24,43 +24,49 @@
              </button>
 
              <div class="collapse navbar-collapse justify-content-start align-center" id="main-nav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav rounded-5">
                     <li class="nav-item">
-                        <a href="#" type="button" class="nav-link btn bg-dark text-light mx-2">home</a>
+                        <a href="#" type="button" class="nav-link btn mx-1">home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="about" type="button" class="nav-link btn bg-dark text-light mx-2">about</a>
+                        <a href="about" type="button" class="nav-link btn mx-1">about</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" type="button" class="nav-link btn bg-dark text-light mx-2">products</a>
+                        <a href="#" type="button" class="nav-link btn mx-1">products</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" type="button" class="nav-link btn bg-dark text-light mx-2">contact</a>
+                        <a href="contact" type="button" class="nav-link btn mx-1">contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="test" type="button" class="nav-link btn bg-dark text-light mx-2">test</a>
-                    </li>
+                    <!--<li class="nav-item">
+                        <a href="test" type="button" class="nav-link">test</a>
+                    </li>-->
                 </ul>
              </div>
 
              <!-- Responsive Search Bar -->
-            <form class="d-flex justify-content-end mx-3 my-2 w-50 w-md-50" role="search">
+            <form class="d-flex justify-content-end mx-3 w-50 w-md-50" role="search">
                 <input type="text" class="form-control me-2 w-50 w-md-75" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
 
             <!-- cart button -->
             <div class="justify-content-end">
-                <a href="cart" class="btn btn-dark">cart</a>
+                <a href="cart" class="btn btn-outline-dark">cart</a>
             </div>
 
         </div>
 
     </nav>
 
+    <!--- Välkomst meddelandet stor box top av sidan --->
+    <header class="header bg-dark py-5">
+        <div class="container  px-4 px-lg-5 my-5">
+            <h1 class="display-4 fw-bolder text-white text-center">Lingonen</h1>
+        </div>
+    </header>
     <!-- containers for items -->
 
     <div class="container-sm text-center py-5">
@@ -70,10 +76,10 @@
             <div class="col-md-6 col-lg-4 col-xl-4" item="1">
 
                 <!-- adds card body -->
-                <div class="card-body mb-5">
+                <div class="card-body mb-5 border border-dark rounded-5">
 
                     <!--  adds img to card -->
-                    <img src="/assets/image(1).jpeg" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                    <img src="/assets/image(1).jpeg" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
 
                     <!-- adds produkt name (card title) -->
                     <h4 class="card-title pt-5">produkt</h4>
@@ -91,35 +97,35 @@
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
 
                     <!-- adds input tags for adding the number of items to cart-->
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
                 </div>
             </div>
 
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="2">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark mb-5 rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light  remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
                 </div>
             </div>
 
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="3">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark mb-5 rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
 
                 </div>
             </div>
@@ -127,14 +133,14 @@
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="4">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark mb-5 rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
 
                 </div>
             </div>
@@ -142,14 +148,14 @@
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="5">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark mb-5 rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
 
                 </div>
             </div>
@@ -157,14 +163,14 @@
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="6">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark mb-5 rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
 
                 </div>
             </div>
@@ -172,14 +178,14 @@
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="7">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark mb-5 rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
 
                 </div>
             </div>
@@ -187,14 +193,14 @@
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="8">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark mb-5 rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
 
                 </div>
             </div>
@@ -202,14 +208,14 @@
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="9">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark mb-5 rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
 
                 </div>
             </div>
@@ -217,14 +223,14 @@
             <!-- -||- -->
 
             <div class="col-md-6 col-lg-4 col-xl-4" item="10">
-                <div class="card-body mb-5">
-                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" style="height: 265px;width: 376x;" alt="..." class="card-img img-fluid mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
                     <input type="text" style="width: 35px" value="0" class="p-1 text-center qty">
                     <input type="button" style="width: 55px" value="-" class="btn btn-light remove_item">
-                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 btnForCart">
+                    <input type="button" style="width: 150px" value="Add to cart" class="btn btn-light d-block mx-auto mt-1 mb-3 btnForCart">
 
                 </div>
             </div>
