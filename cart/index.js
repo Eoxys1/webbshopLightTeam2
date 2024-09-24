@@ -1,12 +1,12 @@
-const data = cart.list()
+/*const data = cart.list()
 /**
  * @type {HTMLDivElement}
  */
-const list = document.getElementById("list")
+/*const list = document.getElementById("list")
 /**
  * @type {HTMLButtonElement}
  */
-const buy_btn = document.getElementById("buy")
+/*const buy_btn = document.getElementById("buy")
 for (const key in data) {
 	const element = data[key]
 	const p = document.createElement("p")
@@ -19,7 +19,13 @@ buy_btn.addEventListener("click", () => {
 		list.removeChild(elem)
 		elem.remove()
 	}
-})
+})*/
+
+const data = cart.list();
+
+
+
+
 
 /* 
 

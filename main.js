@@ -1,4 +1,4 @@
-const item_list = document.getElementById("item_list");
+/*const item_list = document.getElementById("item_list");
 for (const element of item_list.children) {
 	const item_name = element.getAttribute("item");
 	const add_btn = element.querySelector(".add_item");
@@ -28,4 +28,15 @@ for (const element of item_list.children) {
 			qty.value = 0;
 		}
 	});
-}	
+}	*/
+
+
+const item_list = document.getElementById('item_list');
+for (const element of item_list.children){
+	const item_name = element.getAttribute("item");
+	const btnForCart = element.querySelector('.btnForCart');
+
+	btnForCart.addEventListener("click", () => {
+		cart.add(item_name);
+	})
+}
