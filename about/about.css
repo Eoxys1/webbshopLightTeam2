@@ -23,8 +23,8 @@ footer {
   padding-bottom: 3rem !important;
 }
 .nav-item:hover{
-  background-color: rgb(243, 243, 243);
-  color: black;
+  background-color: rgb(232, 232, 242);
+  text-shadow: black;
   border-radius: 10px;
   font-weight: bolder;
   text-decoration: underline;
