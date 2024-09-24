@@ -11,38 +11,39 @@
 <body>
     
         <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container-fluid">
-              <!-- SVG Iconen på vänster sida -->
-              <div class="d-flex">
-                <img src="motorcycle.svg" alt="Motorcycle Icon" class="img-fluid w-25 h-auto">
-              </div>
-          
-              <!-- Dropdown menyn för mobilvy -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-          
-              <!-- Länk-Knappar för att komma till dem andra sidorna. -->
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto rounded-5">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="products.html">Products</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+        <nav class="navbar navbar-expand-md bg-light position-sticky top-0">
+
+          <div class="container-xxl">
+              <!-- toggle button for navbar on mobile screens -->
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" 
+               aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <a href="index.html">
+               <img src="/assets/dinosaur.svg" alt="" class="rounded-circle img-fluid" style="width: 40px; height: 40px;">
+               </a>
+  
+               <div class="collapse navbar-collapse justify-content-start align-center" id="main-nav">
+                  <ul class="navbar-nav rounded-5">
+                      <li class="nav-item">
+                          <a href="index.html" type="button" class="nav-link btn mx-1">home</a>
+                      </li>
+  
+                      <li class="nav-item">
+                          <a href="/about/index.html" type="button" class="nav-link btn mx-1">about</a>
+                      </li>
+  
+                      <li class="nav-item">
+                          <a href="#" type="button" class="nav-link btn mx-2">products</a>
+                      </li>
+  
+                      <li class="nav-item">
+                          <a href="/contact/index.html" type="button" class="nav-link btn mx-2">contact</a>
+                      </li>
+                  </ul>
+                </div>
+          </div>
+      </nav>
           
                 <!--- Välkomst meddelandet stor box top av sidan --->
                 <header class="header bg-dark py-5">

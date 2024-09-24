@@ -22,8 +22,11 @@ footer {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
-.nav-link:hover{
-  background-color: rgb(248, 244, 236);
+.nav-item:hover{
+  background-color: rgb(243, 243, 243);
+  color: black;
+  border-radius: 10px;
+  font-weight: bolder;
 }
 
 
