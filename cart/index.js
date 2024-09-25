@@ -1,11 +1,15 @@
 const data = cart.list()
+
 /**
  * @type {HTMLDivElement}
  */
+
 const list = document.getElementById("list")
+
 /**
  * @type {HTMLButtonElement}
  */
+
 const buy_btn = document.getElementById("buy")
 for (const key in data) {
 	const element = data[key]
@@ -13,6 +17,7 @@ for (const key in data) {
 	p.textContent = `${key} x${element}`
 	list.appendChild(p)
 }
+
 buy_btn.addEventListener("click", () => {
 	cart.clear()
 	for (const elem of Object.values(list.children)) {
@@ -23,13 +28,13 @@ buy_btn.addEventListener("click", () => {
 
 /* 
 
-
-
 */
 
 const pageWidth = 595
 const pageHeight = document.body.clientHeight
+
 // Create a hidden div to hold the screenshot
+
 const screenshotDiv = document.createElement("div")
 screenshotDiv.style.position = "absolute"
 screenshotDiv.style.left = "0"
@@ -42,6 +47,7 @@ const pdf = new jspdf({
 	unit: "px",
 	format: [pageWidth, pageHeight],
 })
+
 html2canvas(document.body, {
 	scrollY: pageHeight, // Capture the entire webpage by scrolling
 	onrendered: function (canvas) {
@@ -53,9 +59,10 @@ html2canvas(document.body, {
 		document.body.removeChild(screenshotDiv)
 	},
 })
-window.pdf = pdf
+
 //pdf.save("test.pdf")
 
+window.pdf = pdf
 window.open_pdf = () => {
 	window.open(pdf.output("bloburl"), "", "innerWidth: 10,innerHeight: 10,screenX: 0,screenY: 0")
 }

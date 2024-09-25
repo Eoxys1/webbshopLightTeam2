@@ -28,28 +28,19 @@
              <div class="collapse navbar-collapse justify-content-start align-center" id="main-nav">
                 <ul class="navbar-nav rounded-5">
                     <li class="nav-item">
-                        <a href="#" type="button" class="nav-link btn mx-1">home</a>
+                        <a href="/index.html" type="button" class="nav-link btn mx-2 bg-dark text-white">home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="about" type="button" class="nav-link btn mx-1">about</a>
-                    </li>
-
-                    <li class="nav-item">/* Hide scrollbars but keep scrolling functionality */
-                        body {
-                            overflow: scroll;
-                            -ms-overflow-style: none;  /* IE and Edge */
-                            scrollbar-width: none;  /* Firefox */
-                          }
-                          
-                          body::-webkit-scrollbar {
-                            display: none;  /* Chrome, Safari, Opera */
-                          }
-                        <a href="#" type="button" class="nav-link btn mx-1">products</a>
+                    <a href="about" type="button" class="nav-link btn mx-2">about</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="contact" type="button" class="nav-link btn mx-1">contact</a>
+                        <a href="#" type="button" class="nav-link btn mx-2">products</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact" type="button" class="nav-link btn mx-2">contact</a>
                     </li>
                     <!--<li class="nav-item">
                         <a href="test" type="button" class="nav-link">test</a>
@@ -64,9 +55,17 @@
             </form> -->
 
             <!-- cart button -->
-            <div class="justify-content-end">
-                <a href="cart" class="btn btn-outline-dark">cart</a>
-            </div>
+            <!--   <a href="cart/" class="">
+                <div class=" text-center btn btn-outline-dark">
+                    <img src="assets/cart.svg" alt="" class="img-fluid cart">
+                    <p >cart</p>
+                </div> -->
+
+                <div class="justify-content-end"></div>
+                    <a href="cart/" class="btn btn-outline-dark ">cart</a>
+                </div>
+
+            </a>
 
         </div>
 
@@ -74,23 +73,23 @@
 
     <!--- Välkomst meddelandet stor box top av sidan --->
     <header class="header bg-dark py-5">
-        <div class="container  px-4 px-lg-5 my-5">
+        <div class="container px-4 px-lg-5 my-5">
             <h1 class="display-4 fw-bolder text-white text-center">Lingonen</h1>
         </div>
     </header>
     <!-- containers for items -->
 
     <div class="container-sm text-center py-5">
-        <div class="row align-items-center justify-content-center gx-5" id="item_list">
-
+        <div class="row align-items-center justify-content-center" id="item_list">
+            
             <!-- add card -->
-            <div class="col-12col-md-6 col-lg-4 col-xl-4" item="1">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="1">
 
                 <!-- adds card body -->
                 <div class="card-body mb-5 border border-dark rounded-5">
 
                     <!--  adds img to card -->
-                    <img src="/assets/image(1).jpeg" alt="..." class="card-img img-fluid image-adjust">
+                    <img src="/assets/image(1).jpeg" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
 
                     <!-- adds produkt name (card title) -->
                     <h4 class="card-title pt-5">produkt</h4>
@@ -115,8 +114,8 @@
             <!-- -||- -->
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="2">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
@@ -128,9 +127,9 @@
 
             <!-- -||- -->
 
-            <div class="cocol-12l-12 col-md-6 col-lg-4 col-xl-4" item="3">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="3">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
@@ -144,8 +143,8 @@
             <!-- -||- -->
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="4">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
@@ -159,8 +158,8 @@
             <!-- -||- -->
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="5">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
@@ -174,8 +173,8 @@
             <!-- -||- -->
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="6">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
@@ -189,8 +188,8 @@
             <!-- -||- -->
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="7">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
@@ -204,8 +203,8 @@
             <!-- -||- -->
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="8">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
@@ -219,8 +218,8 @@
             <!-- -||- -->
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="9">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">
@@ -234,8 +233,8 @@
             <!-- -||- -->
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4" item="10">
-                <div class="card-body mb-3">
-                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust">
+                <div class="card-body mb-5 border border-dark rounded-5">
+                    <img src="assets/zeeconvert-com(1).png" alt="..." class="card-img img-fluid image-adjust rounded-5 mt-3 p-3">
                     <h4 class="card-title pt-5">produkt</h4>
                     <p class="card-text pt-3">price</p>
                     <input type="button" style="width: 55px" value="+" class="btn btn-light add_item">

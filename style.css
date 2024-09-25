@@ -1,4 +1,15 @@
+.cart{
+    height: 20px;
+    width: 20px;
+}
+
 .image-adjust{
     height: 265px;
     width: 376x;
 }
+
+.nav-item:hover{
+    background-color: #f8f4ec;
+    color: black;
+    border-radius: 10px;
+  }
