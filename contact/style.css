@@ -6,10 +6,6 @@
     background-color: rgb(249, 243, 236);
   }
 
-img{
-  height: 40%;
-  width: 40%;
-}
 
 footer {
   background-color: #f8f9fa; 
@@ -22,8 +18,11 @@ footer {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
+
 .nav-item:hover{
-  background-color: rgb(248, 244, 236);
-  color: black;
+  background-color: rgb(232, 232, 242);
+  text-shadow: black;
   border-radius: 10px;
+  font-weight: bolder;
+  text-decoration: underline;
 }

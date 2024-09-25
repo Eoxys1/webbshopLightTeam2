@@ -10,41 +10,32 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
         <script defer src="index.js"></script>
-        <style>
-            body,html{
-                height: 100%;
-                width: 100%;
-                margin: 0px;
-                padding: 0px;
-            }
-        </style>
     </head>
 	<body>
         <nav class="navbar navbar-expand-md bg-light position-sticky top-0">
 
             <div class="container-xxl">
                 <!-- toggle button for navbar on mobile screens -->
-                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" 
-                 aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                 </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" 
+                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="index.html">
+                <img src="/assets/dinosaur.svg" alt="" class="rounded-circle img-fluid" style="width: 40px; height: 40px;">
+                </a>
     
                  <div class="collapse navbar-collapse justify-content-start align-center" id="main-nav">
                     <ul class="navbar-nav rounded-5">
                         <li class="nav-item">
-                            <a href="#" type="button" class="nav-link btn mx-1">home</a>
+                            <a href="/index.html" type="button" class="nav-link btn mx-1">home</a>
                         </li>
     
                         <li class="nav-item">
-                            <a href="about" type="button" class="nav-link btn mx-1">about</a>
+                            <a href="/about" type="button" class="nav-link btn mx-1">about</a>
                         </li>
     
                         <li class="nav-item">
-                            <a href="#" type="button" class="nav-link btn mx-1">products</a>
-                        </li>
-    
-                        <li class="nav-item">
-                            <a href="contact" type="button" class="nav-link btn mx-1">contact</a>
+                            <a href="/contact" type="button" class="nav-link btn mx-1">contact</a>
                         </li>
                         <!--<li class="nav-item">
                             <a href="test" type="button" class="nav-link">test</a>
@@ -54,7 +45,7 @@
     
                 <!-- cart button -->
                 <div class="justify-content-end">
-                    <a href="cart" class="btn btn-outline-dark">cart</a>
+                    <a href="#" class="btn bg-dark text-white">cart</a>
                 </div>
     
             </div>
