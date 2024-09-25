@@ -9,7 +9,9 @@
 }
 
 .nav-item:hover{
-    background-color: #f8f4ec;
-    color: black;
+    background-color: rgb(232, 232, 242);
+    text-shadow: black;
     border-radius: 10px;
-  }
+    font-weight: bolder;
+    text-decoration: underline;
+}
