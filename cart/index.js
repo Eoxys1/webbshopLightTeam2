@@ -26,7 +26,16 @@ const data = cart.list();
 
 const list = document.getElementById("list");
 const buy_btn = document.getElementById('buy');
-
+buy_btn.addEventListener("click", () => {
+	cart.clear();
+	for(const elem of Object.values(list.children)){
+		list.removeChild(elem);
+		elem.remove();
+	}
+	let pElement = document.createElement('p');
+	pElement.textContent = "The cart is empty";
+	list.appendChild(pElement);
+})
 if(Object.keys(data).length == 0){
 	let pElement = document.createElement('p');
 	pElement.textContent = "The cart is empty";
@@ -39,14 +48,6 @@ if(Object.keys(data).length == 0){
 		list.appendChild(p)
 	}
 	
-	buy_btn.addEventListener("click", () => {
-		cart.clear();
-		for(const elem of Object.values(list.children)){
-			list.removeChild(elem);
-			elem.remove();
-		}
-	})
-
 }
 
 
