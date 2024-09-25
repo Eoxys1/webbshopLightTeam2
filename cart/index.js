@@ -1,16 +1,12 @@
-const data = cart.list()
-
+/*const data = cart.list()
 /**
  * @type {HTMLDivElement}
  */
-
-const list = document.getElementById("list")
-
+/*const list = document.getElementById("list")
 /**
  * @type {HTMLButtonElement}
  */
-
-const buy_btn = document.getElementById("buy")
+/*const buy_btn = document.getElementById("buy")
 for (const key in data) {
 	const element = data[key]
 	const p = document.createElement("p")
@@ -24,7 +20,36 @@ buy_btn.addEventListener("click", () => {
 		list.removeChild(elem)
 		elem.remove()
 	}
-})
+})*/
+
+const data = cart.list();
+
+const list = document.getElementById("list");
+const buy_btn = document.getElementById('buy');
+
+if(Object.keys(data).length == 0){
+	let pElement = document.createElement('p');
+	pElement.textContent = "The cart is empty";
+	list.appendChild(pElement);
+}else{
+	for(const key in data){
+		const element = data[key];
+		const p = document.createElement("p")
+		p.textContent = `${key} x${element}`
+		list.appendChild(p)
+	}
+	
+	buy_btn.addEventListener("click", () => {
+		cart.clear();
+		for(const elem of Object.values(list.children)){
+			list.removeChild(elem);
+			elem.remove();
+		}
+	})
+
+}
+
+
 
 /* 
 
