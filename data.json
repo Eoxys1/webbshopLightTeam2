@@ -1,0 +1,52 @@
+{
+    "1": {
+        "image": "/assets/image(1).jpeg",
+        "name": "produkt",
+        "price": 10
+    },
+    "2": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 20
+    },
+    "3": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 20
+    },
+    "4": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 30
+    },
+    "5": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 25
+    },
+    "6": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 10
+    },
+    "7": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 10
+    },
+    "8": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 10
+    },
+    "9": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 20
+    },
+    "10": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "produkt",
+        "price": 5
+    }
+}
