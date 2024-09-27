@@ -1,0 +1,55 @@
+{
+    "1": {
+        "_comment": "takes image from assets and adds to item",
+        "image": "/assets/image(1).jpeg",
+        "__comment": "adds name to item",
+        "name": "product",
+        "___comment": "adds price to item",
+        "price": 10
+    },
+    "2": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 20
+    },
+    "3": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 20
+    },
+    "4": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 30
+    },
+    "5": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 25
+    },
+    "6": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 10
+    },
+    "7": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 10
+    },
+    "8": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 10
+    },
+    "9": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 20
+    },
+    "10": {
+        "image": "/assets/zeeconvert-com(1).png",
+        "name": "product",
+        "price": 5
+    }
+}
