@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Contact</title>
+    <script defer src="./index.js"></script>
 </head>
 <body>
  
@@ -58,36 +59,36 @@
                 <!---Container för text-->
                 <div class="container-fluid">
                     <div class="container p-5 my-5 border bg-dark text-light rounded-5">
-                        <form action="#">
+                        <form action="#" method="post">
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="namn">Förnamn:</label>
-                                  <input type="text" class="form-control" placeholder="Förnamn" name="namn">
+                                  <input type="text" class="form-control" placeholder="Förnamn" required name="namn">
                                 </div>
                             </div>
                             
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="lastname">Efternamn:</label>
-                                  <input type="text" class="form-control" placeholder="Efternamn" name="lastname">
+                                  <input type="text" class="form-control" placeholder="Efternamn" required name="lastname">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="number">Number:</label>
-                                  <input type="tel" class="form-control" placeholder="+46 Number" name="number">
+                                  <input type="tel" class="form-control" placeholder="+46 Number" required name="number">
                                 </div>
                             </div>
 
                             <div class="col-md-12 mb-3">
                                 <label for="comment">Meddelande:</label>
-                                <textarea class="form-control" rows="4" id="comment" name="text" placeholder="Skriv här."></textarea>
+                                <textarea class="form-control" rows="4" id="comment" name="text" required placeholder="Skriv här."></textarea>
                             </div>
 
                                 <div>
-                                    <button type="button" class="btn btn-success">Skicka</button>
+                                    <button type="button" id="form_submit" class="btn btn-success">Skicka</button>
                                 </div>
                             </div>      
                         </form>
