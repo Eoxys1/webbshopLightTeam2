@@ -23,8 +23,8 @@
                  <a href="/index.html">
                  <img src="/assets/dinosaur.svg" alt="" class="rounded-circle img-fluid" style="width: 40px; height: 40px;">
                  </a>
-    
-                 <div class="collapse navbar-collapse justify-content-start align-center" id="main-nav">
+
+                    <!-- makes a list of the buttons that can colapse on small screens  and creates said buttons -->                 <div class="collapse navbar-collapse justify-content-start align-center" id="main-nav">
                     <ul class="navbar-nav rounded-5">
                         <li class="nav-item">
                             <a href="/index.html" type="button" class="nav-link btn mx-1">home</a>
@@ -47,7 +47,7 @@
     
         </nav>
           
-                <!--- Välkomst meddelandet stor box top av sidan --->
+                <!--- welcome massage on big box in top under navigation bar --->
                 <header class="header bg-dark py-5">
                 <div class="container  px-4 px-lg-5 my-5">
                     <h1 class="display-4 fw-bolder text-white text-center">Lingonen</h1>
@@ -61,20 +61,22 @@
                     <div class="container p-5 my-5 border bg-dark text-light rounded-5">
                         <form action="#" method="post">
 
+                            <!-- creates the text editor for Name -->
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label for="namn">Förnamn:</label>
-                                  <input type="text" class="form-control" placeholder="Förnamn" required name="namn">
+                                    <label for="namn">Name:</label>
+                                  <input type="text" class="form-control" placeholder="name" required name="namn">
                                 </div>
                             </div>
-                            
+                            <!-- creates the text editor for Surname -->
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label for="lastname">Efternamn:</label>
-                                  <input type="text" class="form-control" placeholder="Efternamn" required name="lastname">
+                                    <label for="lastname">Surname:</label>
+                                  <input type="text" class="form-control" placeholder="Surname" required name="lastname">
                                 </div>
                             </div>
 
+                            <!-- creates the text editor for number (mind that only numbers can be put into the text area) -->
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="number">Number:</label>
@@ -82,9 +84,10 @@
                                 </div>
                             </div>
 
+                            <!-- creates the text editor for message -->
                             <div class="col-md-12 mb-3">
-                                <label for="comment">Meddelande:</label>
-                                <textarea class="form-control" rows="4" id="comment" name="text" required placeholder="Skriv här."></textarea>
+                                <label for="comment">Message:</label>
+                                <textarea class="form-control" rows="4" id="comment" name="text" required placeholder="message"></textarea>
                             </div>
 
                                 <div>
@@ -94,7 +97,8 @@
                         </form>
                     </div>
             </main>
-
+            
+            <!-- adds fotter to the page -->
                 <footer class="bg-light text-center text-lg-start">
                     <div class="container p-3">
                         <p class="text-center">© 2024 Te4.Co.... All rights reserved.</p>
