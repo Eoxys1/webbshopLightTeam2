@@ -30,4 +30,17 @@ footer {
   text-decoration: underline;
 }
 
+html, body{
+  min-height: 100dvh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex: 1;
+}
+
 

@@ -30,12 +30,15 @@ data_fetch().then((data) => {
 			}
 		});
 
+		// increse amout of products
 		add_btn.addEventListener("click", () => {
 			qty.value++;
 		});
+		//  adds products to cart
 		btnForCart.addEventListener("click", () => {
 			cart.set(item_name, parseInt(qty.value));
 		});
+		// decrease amout of products
 		remove_btn.addEventListener("click", () => {
 			qty.value--;
 			if (qty.value < 0) {
