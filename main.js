@@ -1,12 +1,17 @@
+//Retrieve the id item_list from index 
 const item_list = document.getElementById("item_list");
 /**
  * @return {Promise<{[id:string]:{image:string,name:string,price:number}}>}
  */
+
+//Retrive data the data from json-file
 async function data_fetch() {
 	const res = await fetch('/data.json')
 	const json = await res.json()
 	return json
 }
+
+//Runs when the json-data is fully retrieved with data, as parameter
 data_fetch().then((data) => {
 	for (const element of item_list.children) {
 		const item_name = element.getAttribute("item");

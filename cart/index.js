@@ -1,12 +1,17 @@
+//Store the current list of items in the cart
 const data_cart = cart.list();
 /**
  * @return {Promise<{[id:string]:{image:string,name:string,price:number}}>}
  */
+
+//Retrive data the data from json-file
 async function data_fetch() {
 	const res = await fetch('/data.json')
 	const json = await res.json()
 	return json
 }
+
+//Generate elements for a cart item in order to display them on the cart-page (bootstrap-styled)
 function gen_element(image, name, price) {
 
 	var node_1 = document.createElement('DIV');
@@ -27,7 +32,7 @@ function gen_element(image, name, price) {
 	node_3.appendChild(node_4);
 
 	var node_5 = document.createElement('P');
-	node_5.setAttribute('class', 'card-text ms-auto me-2');
+	node_5.setAttribute('class', 'card-text me-2');
 	node_1.appendChild(node_5);
 
 	var node_6 = document.createTextNode(`${price} kr`);
@@ -36,10 +41,14 @@ function gen_element(image, name, price) {
 	return node_1
 }
 
-const priceText = document.getElementById("priceList").querySelector('p')
+const priceText = document.getElementById("priceList").querySelector('p')  //retrieved from the cart-index
+
+//Runs when the json-data is fully retrieved with data, as parameter
 data_fetch().then((data) => {
 	const list = document.getElementById("list");
 	const buy_btn = document.getElementById('buy');
+
+	//When the checkout-button is clicked, the cart clears, all items from the DOM are removed and will also display 'The cart is empty'
 	buy_btn.addEventListener("click", () => {
 		cart.clear();
 		for (const elem of Object.values(list.children)) {
@@ -52,17 +61,22 @@ data_fetch().then((data) => {
 		priceText.innerHTML = `<strong>Total:</strong>`
 		priceText.setAttribute('class', 'fs-4 mt-2')
 	})
+
+	//If the cart is empty it will display that. Updates also the price text
 	if (Object.keys(data_cart).length == 0) {
 		let pElement = document.createElement('p');
 		pElement.textContent = "The cart is empty";
 		list.appendChild(pElement);
 		priceText.innerHTML = `<strong>Total:</strong>`
 		priceText.setAttribute('class', 'fs-4 mt-2')
+		
+	//If the cart is not empty, it will generate an HTML element for each item using gen_element(), appending items to the list element
 	} else {
 		for (const key in data_cart) {
 			const element = data_cart[key];
 			list.appendChild(gen_element(data[key].image, `${data[key].name} x${element}`, element * data[key].price));
 		}
+
 		const temp=[]
 		for (const elem of Object.entries(data_cart)) {
 			temp.push(data[elem[0]].price * elem[1])
@@ -73,7 +87,6 @@ data_fetch().then((data) => {
 		}
 		priceText.innerHTML = `<strong>Total:</strong> ${out_num} kr`
 		priceText.setAttribute('class', 'fs-4 mt-2')
-		//Object.entries(data_cart).map((val) => { return data[val[0]].price * val[1] }).reduce((_a, _) => { return _a + _ }, 0)
 	}
 })
 

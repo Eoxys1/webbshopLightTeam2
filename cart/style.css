@@ -28,3 +28,31 @@ main{
     font-weight: bolder;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .card-body.d-flex {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align the content */
+    }
+
+    .card-body img {
+        width: 100%; /* Make the image take full width */
+        height: auto; /* Adjust height automatically */
+        margin-bottom: 15px; /* Add space below the image */
+    }
+
+    .card-title {
+        text-align: center; /* Center title for better visual balance */
+        margin-bottom: 10px; /* Add space below the title */
+    }
+
+    .card-text {
+        text-align: center; /* Center price text */
+    }
+}
+
+@media (min-width: 769px) {
+    .card-text {
+        margin-left: auto;  /* Moves price text to the right */
+    }
+}
