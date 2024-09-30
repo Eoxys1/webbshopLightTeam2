@@ -51,7 +51,8 @@ data_fetch().then((data) => {
 	 * @type {HTMLDivElement}
 	 */
 	const ss_elem = document.querySelector('body>main');
-	const row = ss_elem.querySelector('.row')
+	const row = ss_elem.children[0].children[0]
+	const margin_remove = ss_elem.children[0]
 	const pure_priceList = document.querySelector('#priceList');
 
 	//When the checkout-button is clicked, a pdf-file will download and show your receipt, the cart clears, all items from the DOM are removed and will also display 'The cart is empty'
@@ -65,6 +66,9 @@ data_fetch().then((data) => {
 			format: [pageWidth,pageHeight],
 		})
 		ss_elem.style.backgroundColor = "white"
+		row.classList.remove("row")
+		row.classList.add("column")
+		margin_remove.classList.remove("container", "my-5")
 		pure_priceList.removeChild(buy_btn)
 		/**
 		 * @type {HTMLCanvasElement}
@@ -72,14 +76,14 @@ data_fetch().then((data) => {
 		const canvas = await new Promise((resolve, reject) => {
 			html2canvas(ss_elem, {
 				scrollY: pageHeight, // Capture the entire webpage by scrolling
-				scrollX: pageWidth,
-
 				onrendered: function (canvas) {
 					resolve(canvas)
 				},
 			})
 		})
-
+		margin_remove.classList.add("container", "my-5")
+		row.classList.add("row")
+		row.classList.remove("column")
 		pure_priceList.appendChild(buy_btn)
 		delete ss_elem.style.backgroundColor
 		pdf.addImage(canvas.toDataURL("image/jpeg"), "JPEG", 0, 0, canvas.width, canvas.height)
