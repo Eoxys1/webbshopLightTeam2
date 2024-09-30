@@ -47,9 +47,51 @@ const priceText = document.getElementById("priceList").querySelector('p')  //ret
 data_fetch().then((data) => {
 	const list = document.getElementById("list");
 	const buy_btn = document.getElementById('buy');
+	/**
+	 * @type {HTMLDivElement}
+	 */
+	const ss_elem = document.querySelector('body>main');
+	const row = ss_elem.querySelector('.row')
+	const pure_priceList = document.querySelector('#priceList');
 
-	//When the checkout-button is clicked, the cart clears, all items from the DOM are removed and will also display 'The cart is empty'
-	buy_btn.addEventListener("click", () => {
+	//When the checkout-button is clicked, a pdf-file will download and show your receipt, the cart clears, all items from the DOM are removed and will also display 'The cart is empty'
+	buy_btn.addEventListener("click", async () => {
+
+		const pageWidth = ss_elem.clientWidth
+		const pageHeight = ss_elem.clientHeight
+
+		const pdf = new jspdf({
+			unit: "px",
+			format: [pageWidth,pageHeight],
+		})
+		ss_elem.style.backgroundColor = "white"
+		pure_priceList.removeChild(buy_btn)
+		/**
+		 * @type {HTMLCanvasElement}
+		 */
+		const canvas = await new Promise((resolve, reject) => {
+			html2canvas(ss_elem, {
+				scrollY: pageHeight, // Capture the entire webpage by scrolling
+				scrollX: pageWidth,
+
+				onrendered: function (canvas) {
+					resolve(canvas)
+				},
+			})
+		})
+
+		pure_priceList.appendChild(buy_btn)
+		delete ss_elem.style.backgroundColor
+		pdf.addImage(canvas.toDataURL("image/jpeg"), "JPEG", 0, 0, canvas.width, canvas.height)
+		//pdf.save("test.pdf") // downloads the pdf
+
+		window.pdf = pdf
+		window.open(pdf.output("bloburl"), "", "innerWidth: 10,innerHeight: 10,screenX: 0,screenY: 0")
+		/* 		window.open_pdf = () => {
+					window.open(pdf.output("bloburl"), "", "innerWidth: 10,innerHeight: 10,screenX: 0,screenY: 0")
+				} */
+
+
 		cart.clear();
 		for (const elem of Object.values(list.children)) {
 			list.removeChild(elem);
@@ -69,21 +111,24 @@ data_fetch().then((data) => {
 		list.appendChild(pElement);
 		priceText.innerHTML = `<strong>Total:</strong>`
 		priceText.setAttribute('class', 'fs-4 mt-2')
-		
-	//If the cart is not empty, it will generate an HTML element for each item using gen_element(), appending items to the list element
+
+		//If the cart is not empty, it will generate an HTML element for each item using gen_element(), appending items to the list element
 	} else {
 		for (const key in data_cart) {
 			const element = data_cart[key];
 			list.appendChild(gen_element(data[key].image, `${data[key].name} x${element}`, element * data[key].price));
 		}
 
-		const temp=[]
+		//Create an empty array and then add price x number of items into the array
+		const temp = []
 		for (const elem of Object.entries(data_cart)) {
 			temp.push(data[elem[0]].price * elem[1])
 		}
-		let out_num=0
+
+		//Loop through the temp array and add to out_num to display the total price. 
+		let out_num = 0
 		for (const element of temp) {
-			out_num+=element
+			out_num += element
 		}
 		priceText.innerHTML = `<strong>Total:</strong> ${out_num} kr`
 		priceText.setAttribute('class', 'fs-4 mt-2')
@@ -94,8 +139,6 @@ data_fetch().then((data) => {
 
 
 /* 
-
-*/
 
 const pageWidth = 595
 const pageHeight = document.body.clientHeight
@@ -110,26 +153,25 @@ screenshotDiv.style.width = pageWidth + "px"
 screenshotDiv.style.height = pageHeight + "px"
 screenshotDiv.style.overflow = "hidden"
 document.body.appendChild(screenshotDiv)
+
+
+
 const pdf = new jspdf({
 	unit: "px",
 	format: [pageWidth, pageHeight],
 })
-
 html2canvas(document.body, {
 	scrollY: pageHeight, // Capture the entire webpage by scrolling
 	onrendered: function (canvas) {
-		screenshotDiv.appendChild(canvas)
+		document.body.appendChild(canvas)
+		/* screenshotDiv.appendChild(canvas)
 		const offsetX = (pageWidth - canvas.width) / 2
 		const offsetY = (pageHeight - canvas.height) / 2
 		console.log({ pageWidth, pageHeight, offsetX, offsetY })
 		pdf.addImage(canvas.toDataURL("image/jpeg"), "JPEG", 0, 0, canvas.width, canvas.height)
-		document.body.removeChild(screenshotDiv)
+		document.body.removeChild(screenshotDiv) 
 	},
 })
 
-//pdf.save("test.pdf")
-
-window.pdf = pdf
-window.open_pdf = () => {
-	window.open(pdf.output("bloburl"), "", "innerWidth: 10,innerHeight: 10,screenX: 0,screenY: 0")
-}
+pdf.save("test.pdf")
+*/
