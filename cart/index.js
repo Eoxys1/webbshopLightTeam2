@@ -70,6 +70,12 @@ data_fetch().then((data) => {
 		row.classList.add("column")
 		margin_remove.classList.remove("container", "my-5")
 		pure_priceList.removeChild(buy_btn)
+		/** @type {HTMLDivElement[]}*/
+		const temp_children=list.children
+		for (const element of temp_children) {
+			element.style.width="550px"
+			//element.classList.add('ms-5', 'mt-2')
+		}
 		/**
 		 * @type {HTMLCanvasElement}
 		 */
@@ -81,11 +87,15 @@ data_fetch().then((data) => {
 				},
 			})
 		})
+		for (const element of temp_children) {
+			element.style.width=null
+			//element.classList.remove('ms-5', 'mt-2')
+		}
 		margin_remove.classList.add("container", "my-5")
 		row.classList.add("row")
 		row.classList.remove("column")
 		pure_priceList.appendChild(buy_btn)
-		delete ss_elem.style.backgroundColor
+		ss_elem.style.backgroundColor=null
 		pdf.addImage(canvas.toDataURL("image/jpeg"), "JPEG", 0, 0, canvas.width, canvas.height)
 		//pdf.save("test.pdf") // downloads the pdf
 
