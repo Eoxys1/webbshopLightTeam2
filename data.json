@@ -1,55 +1,55 @@
 {
     "1": {
         "_comment": "takes image from assets and adds to item",
-        "image": "/assets/image(1).jpeg",
+        "image": "/assets/pythonBookLearning.jpg",
         "__comment": "adds name to item",
-        "name": "product",
+        "name": "Learn Python",
         "___comment": "adds price to item",
-        "price": 10
+        "price": 400
     },
     "2": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
-        "price": 20
+        "image": "/assets/rubyBookLearningPrograming.jpg",
+        "name": "Learn Ruby",
+        "price": 350
     },
     "3": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
-        "price": 20
+        "image": "/assets/c++BookLearningPrograming.jpg",
+        "name": "Learn C++",
+        "price": 200
     },
     "4": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
-        "price": 30
+        "image": "/assets/pythonBookPrograming.jpg",
+        "name": "How to program Python",
+        "price": 650
     },
     "5": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
-        "price": 25
+        "image": "/assets/unixBookLearning.jpg",
+        "name": "Learn Unix",
+        "price": 300
     },
     "6": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
-        "price": 10
+        "image": "/assets/howToFixBrokenCode.jpeg",
+        "name": "How to fix broken code",
+        "price": 500
     },
     "7": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
-        "price": 10
+        "image": "/assets/becomeABetterProgramer.jpg",
+        "name": "become a better programmer",
+        "price": 350
     },
     "8": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
+        "image": "/assets/ExtremePrograming.jpg",
+        "name": "Become a programming fanatic",
         "price": 10
     },
     "9": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
-        "price": 20
+        "image": "/assets/gitPocketGuide.jpg",
+        "name": "Git poket guide",
+        "price": 250
     },
     "10": {
-        "image": "/assets/zeeconvert-com(1).png",
-        "name": "product",
-        "price": 5
+        "image": "/assets/viAndVimBookLearning.jpg",
+        "name": "Learn VI and Vim",
+        "price": 500
     }
 }

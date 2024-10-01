@@ -19,8 +19,7 @@ function gen_element(image, name, price) {
 	var node_2 = document.createElement("IMG")
 	node_2.setAttribute("src", image)
 	node_2.setAttribute("alt", "...")
-	node_2.setAttribute("class", "card-img img-fluid image-adjust rounded-3")
-	node_2.setAttribute("style", "width: 250px; height: 150px;")
+	node_2.setAttribute("class", "card-img img-fluid image-adjust")
 	node_1.appendChild(node_2)
 
 	var node_3 = document.createElement("H4")
