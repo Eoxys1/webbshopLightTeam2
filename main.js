@@ -11,7 +11,7 @@ async function data_fetch() {
 	return json
 }
 
-//Runs when the json-data is fully retrieved with data, as parameter
+//Runs when the json-data is called (with data as parameter)
 data_fetch().then((data) => {
 	for (const element of item_list.children) {
 		const item_name = element.getAttribute("item");
@@ -22,9 +22,12 @@ data_fetch().then((data) => {
 		const productImg = element.querySelector(".productImg")
 		const productName = element.querySelector(".productName")
 		const productPrice = element.querySelector(".productPrice")
+
+		//Determine the content for each item with the json-data
 		productImg.setAttribute('src',data[item_name].image)
 		productName.textContent = data[item_name].name
 		productPrice.textContent = `${data[item_name].price} kr`
+
 		qty.addEventListener('input', () => {
 			// Replace any non-digit character with an empty string
 			qty.value = qty.value.replace(/[^0-9]/g, '');
