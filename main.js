@@ -24,7 +24,7 @@ data_fetch().then((data) => {
 		const productPrice = element.querySelector(".productPrice")
 
 		//Determine the content for each item with the json-data
-		productImg.setAttribute('src',data[item_name].image)
+		productImg.setAttribute('src',`.${data[item_name].image}`)
 		productName.textContent = data[item_name].name
 		productPrice.textContent = `${data[item_name].price} kr`
 

@@ -17,7 +17,7 @@ function gen_element(image, name, price) {
 	node_1.setAttribute("class", "card-body mb-5 border border-dark mb-5 rounded-3 d-flex p-4")
 
 	var node_2 = document.createElement("IMG")
-	node_2.setAttribute("src", image)
+	node_2.setAttribute("src", `..${image}`)
 	node_2.setAttribute("alt", "...")
 	node_2.setAttribute("class", "card-img img-fluid image-adjust")
 	node_1.appendChild(node_2)
