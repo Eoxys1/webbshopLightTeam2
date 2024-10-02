@@ -6,7 +6,7 @@ const item_list = document.getElementById("item_list");
 
 //Retrive data the data from json-file
 async function data_fetch() {
-	const res = await fetch('/data.json')
+	const res = await fetch('./data.json')
 	const json = await res.json()
 	return json
 }
